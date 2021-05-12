@@ -1,13 +1,3 @@
-# Desafio para vaga de analista júnior
-
-## Considerações Gerais
-
-* Sua solução deverá ser desenvolvida em dotnet core 2.1+.
-
-* No seu README, você deverá fazer uma explicação sobre a solução encontrada, tecnologias envolvidas e instrução de uso da solução. 
-
-* É interessante que você também registre ideias que gostaria de implementar caso tivesse mais tempo.
-
 ## Problema
 
 Imagine que você ficou responsável por construir um sistema que seja capaz de receber milhares de eventos por segundo de sensores espalhados pelo Brasil, nas regiões norte, nordeste, sudeste e sul. Seu cliente também deseja que na solução ele possa visualizar esses eventos de forma clara.
@@ -48,19 +38,7 @@ Descrição:
         * brasil.sul.sensor01 - 1250
         * brasil.sul.sensor02 - 250
 
-## Avaliação
+##Execucao do Projeto
 
-Nossa equipe de desenvolvedores irá avaliar código, simplicidade da solução, testes unitários, arquitetura e automatização de tarefas.
-
-Tente automatizar ao máximo sua solução. Isso porque no caso de deploy em vários servidores, não é interessante que tenhamos que entrar de máquina em máquina para instalar cada componente da solução.
-
-Em caso de dúvida, entre em contato com o responsável pelo seu processo seletivo.
-
-## Considerações de Avaliação (Diferenciais)
-
-* Documentaçao do código
-* Organização/Legibilidade
-* Docker (importante como fator de desequilíbrio)
-* README e Makefile (este último não obrigatório, porém recomendado)
-* Testes unitários
-* Uso correto de dotNet core e de dotNet ef (este último não obrigatório, porém recomendado)
+Para executar a aplicação é necessário apenas clicar digitar o comando "docker compose up" dentro da pasta da aplicação "SensorWebApp".
+Caso não inicie sozinho, para acessar a página frontend, basta digitar http://localhost:20021/.
