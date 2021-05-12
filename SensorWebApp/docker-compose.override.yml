@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sensorwebapp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  sensorwebapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+

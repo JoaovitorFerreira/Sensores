@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorWebApp", "SensorWebApp\SensorWebApp.csproj", "{690531E2-5D11-4B0B-9687-19A75CC8348C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F4DBC413-F049-4E9D-B486-316371F6EABF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorWebApi", "SensorWebApi\SensorWebApi.csproj", "{A90A99F1-6028-4A08-B578-0136DD0C5058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{690531E2-5D11-4B0B-9687-19A75CC8348C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690531E2-5D11-4B0B-9687-19A75CC8348C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690531E2-5D11-4B0B-9687-19A75CC8348C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690531E2-5D11-4B0B-9687-19A75CC8348C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DBC413-F049-4E9D-B486-316371F6EABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DBC413-F049-4E9D-B486-316371F6EABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DBC413-F049-4E9D-B486-316371F6EABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DBC413-F049-4E9D-B486-316371F6EABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90A99F1-6028-4A08-B578-0136DD0C5058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90A99F1-6028-4A08-B578-0136DD0C5058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90A99F1-6028-4A08-B578-0136DD0C5058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90A99F1-6028-4A08-B578-0136DD0C5058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {690DBECD-01C4-4F78-9653-26F04804097E}
+	EndGlobalSection
+EndGlobal

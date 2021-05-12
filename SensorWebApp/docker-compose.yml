@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  sensorwebapp:
+    image: ${DOCKER_REGISTRY-}sensorwebapp
+    build:
+      context: .
+      dockerfile: SensorWebApp/Dockerfile
+    ports:
+    - "20021:80" 
+    networks: 
+        - sensor-network
+
+  sensorwebapi:
+    image: ${DOCKER_REGISTRY-}sensorwebapi
+    build:
+      context: .
+      dockerfile: SensorWebApi/Dockerfile
+    ports:
+    - "20020:80" 
+    networks: 
+        - sensor-network
+networks: 
+  sensor-network:
+    driver: bridge

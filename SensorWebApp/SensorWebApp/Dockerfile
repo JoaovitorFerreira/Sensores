@@ -1,0 +1,29 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:2.1 AS base
+WORKDIR /app
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
+RUN npm install -g npm
+
+
+FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+WORKDIR /src
+RUN apt-get install -y nodejs
+RUN npm install -g npm
+COPY ["SensorWebApp/SensorWebApp.csproj", "SensorWebApp/"]
+RUN dotnet restore "SensorWebApp/SensorWebApp.csproj"
+COPY . .
+RUN npm install
+RUN npm audit fix
+WORKDIR /src/SensorWebApp
+RUN dotnet build "SensorWebApp.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "SensorWebApp.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "SensorWebApp.dll"]

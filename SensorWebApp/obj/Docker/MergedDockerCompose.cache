@@ -1,0 +1,31 @@
+networks:
+  sensor-network:
+    driver: bridge
+services:
+  sensorwebapi:
+    build:
+      context: E:\projetos\junior-analyst\SensorWebApp
+      dockerfile: SensorWebApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: sensorwebapi
+    networks:
+      sensor-network: {}
+    ports:
+    - published: 20020
+      target: 80
+    - target: 80
+  sensorwebapp:
+    build:
+      context: E:\projetos\junior-analyst\SensorWebApp
+      dockerfile: SensorWebApp/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: sensorwebapp
+    networks:
+      sensor-network: {}
+    ports:
+    - published: 20021
+      target: 80
+    - target: 80
+version: '3.4'
