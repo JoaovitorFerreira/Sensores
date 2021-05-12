@@ -38,7 +38,7 @@ Descrição:
         * brasil.sul.sensor01 - 1250
         * brasil.sul.sensor02 - 250    
 
-## Resolução do Projeto
+## Resolução do Problema
 
 O que foi criado:
 O SensorWebApp é uma aplicação dividida em frontend e backend, cada um localizado em um ambiente separado por containers.
